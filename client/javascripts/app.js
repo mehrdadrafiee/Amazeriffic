@@ -83,12 +83,9 @@ var main = function (toDoObjects) {
                         // create the new to-do item
                         newToDo = {"description":description, "tags":tags};
                                  
-                    toDoObjects.push({"description":description, "tags":tags});
-
                     // here we'll do a quick post to our todos route
-                    $.post("todos", newToDo, function (response) {
-                        console.log("We posted and the server responded!");
-                        console.log(response);
+                    $.post("todos", newToDo, function (result) {
+                        console.log(result);
                     });
                     
                     // update toDos
